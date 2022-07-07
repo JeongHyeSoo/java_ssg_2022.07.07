@@ -22,9 +22,6 @@ public class App {
                     System.out.printf("작가 : ");
                     String author = sc.nextLine().trim();
                     System.out.println("1번 명언이 등록되었습니다.");
-                case "목록":
-                    String content = sc.nextLine().trim();
-                    System.out.printf(content);
             }
         }
 

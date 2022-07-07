@@ -7,7 +7,7 @@ public class App {
         System.out.println("== 명언 SSG ==");
 
         Scanner sc = new Scanner(System.in);
-
+        int wiswSayingLastId=0;
         outer:
         while (true) {
             System.out.printf("명령) ");
@@ -21,7 +21,13 @@ public class App {
                     String content = sc.nextLine().trim();
                     System.out.printf("작가 : ");
                     String author = sc.nextLine().trim();
-                    System.out.println("1번 명언이 등록되었습니다.");
+                    int id = ++wiswSayingLastId;
+
+                    WiseSaying wiseSaying = new WiseSaying(id, content, author);
+                    System.out.println(wiseSaying);
+
+                    System.out.println(id+"번 명언이 등록되었습니다.");
+                    break;
             }
         }
 
